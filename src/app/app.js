@@ -1,14 +1,17 @@
 angular.module('BooksGUI', [
     'ui.router'
 ])
-    .controller('BooksConroller', function($scope){
+    .controller('BooksController', function($scope){
         $scope.books = [];
 
-        $http.get('http://localhost:8080/books-filter/app_dev.php?format=pretty&keywords[]=word')
+        /*$http.get('http://localhost:8080/books-filter/web/app_dev.php?format=pretty')
             .then(function(response){
                 $scope.books = response.data
-            })
+            });
+*/
+
     })
+
     .controller('BooksGUIController', function ($scope) {})
 
     .config(function($stateProvider, $urlRouterProvider){

@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div class="col col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2>Your eBook list</h2></div>
+        <div class="panel-body">
+            <div class="form-group col-sm-3">
+                <label>Search title in list</label>
+                <input type="text" class="form-control" ng-model="search.itemTitle" />
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>
+                        <a href="#" ng-click="sortType = 'itemTitle'; sortReverse = !sortReverse" class="glyphicon glyphicon-sort"> Title</a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sortType = 'priceValue'; sortReverse = !sortReverse" class="glyphicon glyphicon-sort"> Price</a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sortType = 'timeToEnd'; sortReverse = !sortReverse" class="glyphicon glyphicon-sort"> Time to End</a>
+                    </th>
+                    <th>Add to Favorite</th>
+                    <!--<th> Present</th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="book in books | filter:search.itemTitle | orderBy:sortType:sortReverse">
 
-</body>
-</html>
+                    <td>{{book.itemTitle}}</td>
+                    <td>{{book.priceValue}}</td>
+                    <td>{{book.timeToEnd}}</td>
+                    <td><button class='btn btn-success' ng-click="removeItem(place)">Add</button></td>
+                    <!--<td ng-show="presentColumnVisibility"><input type="checkbox" ng-model="person.Present"></td>-->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
