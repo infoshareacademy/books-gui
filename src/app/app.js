@@ -3,13 +3,6 @@ angular.module('BooksGUI', [
 ])
     .controller('BooksController', function($scope){
         $scope.books = [];
-
-        /*$http.get('http://localhost:8080/books-filter/web/app_dev.php?format=pretty')
-            .then(function(response){
-                $scope.books = response.data
-            });
-*/
-
     })
 
     .controller('BooksGUIController', function ($scope) {})
