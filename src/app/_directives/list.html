@@ -5,15 +5,23 @@
             <div class="form-group col-sm-3">
                 <label>Search title in list</label>
                 <input type="text" class="form-control" ng-model="search.itemTitle" />
-                <span class="form-group-btn">
-                    <button type="button" class="btn btn-sm btn-info" ng-click="refreshBookList">Refresh list</button>
-                </span>
+            </div>
+            <div style="float: right; text-align: right" class="form-group col-sm-5">
+                    <label>Refresh list from Allegro</label>
+                    <button type="button" class="btn btn-sm btn-warning" ng-click="refreshList()">Refresh list</button>
+            </div>
+            <div style="text-align: center" class="table-group col-sm-12">
+                <button type="button" class="btn btn-sm btn-info" ng-disabled="currentPage == 0" ng-click="currentPage = currentPage - 1">Previous</button>
+                {{currentPage+1}}/{{numberOfPages}}
+                <button type="button" class="btn btn-sm btn-info" ng-disabled="currentPage == numberOfPages - 1" ng-click="currentPage = currentPage + 1">Next</button>
+
             </div>
         </div>
         <div class="panel-body">
             <table class="table table-bordered">
                 <thead>
                 <tr>
+                    <th></th>
                     <th>
                         <a href="#" ng-click="sortType = 'itemTitle'; sortReverse = !sortReverse" class="glyphicon glyphicon-sort"> Title</a>
                     </th>
@@ -24,12 +32,12 @@
                         <a href="#" ng-click="sortType = 'timeToEnd'; sortReverse = !sortReverse" class="glyphicon glyphicon-sort"> Time to End</a>
                     </th>
                     <th>Add to Favorite</th>
-                    <!--<th> Present</th>-->
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="book in books | filter:search.itemTitle | orderBy:sortType:sortReverse | startBy: currentPage*pageSize | limitTo: pageSize">
 
+                    <td><img src="{{book.photoUrl}}"></td>
                     <td>{{book.itemTitle}}</td>
                     <td>{{book.priceValue}}</td>
                     <td>{{book.timeToEnd}}</td>
@@ -38,9 +46,9 @@
                 </tr>
                 </tbody>
             </table>
-                <button ng-disabled="currentPage == 0" ng-click="currentPage = currentPage - 1">Previous</button>
+                <button type="button" class="btn btn-sm btn-info" ng-disabled="currentPage == 0" ng-click="currentPage = currentPage - 1">Previous</button>
                 {{currentPage+1}}/{{numberOfPages}}
-                <button ng-disabled="currentPage == numberOfPages - 1" ng-click="currentPage = currentPage + 1">Next</button>
+                <button type="button" class="btn btn-sm btn-info" ng-disabled="currentPage == numberOfPages - 1" ng-click="currentPage = currentPage + 1">Next</button>
         </div>
     </div>
 </div>

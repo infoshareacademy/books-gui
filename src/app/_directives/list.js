@@ -1,5 +1,5 @@
 angular.module('BooksGUI')
-    .directive('listContent', function (){
+    .directive('listContent', function () {
         return {
             restrict: 'E',
             templateUrl: '_directives/list.html',
@@ -10,30 +10,36 @@ angular.module('BooksGUI')
                 $scope.currentPage = 0;
                 $scope.pageSize = 20;
                 $scope.numberOfPages = 0;
-
-                $http.get('http://localhost:8080/books-filter/web/app_dev.php?format=pretty')
-                    .then(function(response){
-                        $scope.books = response.data;
-                        $scope.numberOfPages = Math.ceil($scope.books.length/$scope.pageSize);
-                    });
                 $scope.sortType = 'book.itemTitle';
                 $scope.sortReverse = false;
+
+                var initNewList = function () {
+
+                    $http.get('http://localhost:8080/books-filter/web/app_dev.php?format=pretty')
+                        .then(function (response) {
+                            $scope.books = response.data;
+                            $scope.numberOfPages = Math.ceil($scope.books.length / $scope.pageSize);
+                            $scope.currentPage = 0;
+
+                        });
+                };
+
+                initNewList();
+
+                $scope.refreshList = function () {
+                    $http.post('http://localhost:3000/books')
+                        .then(function () {
+                            console.log('marek');
+                            initNewList();
+                        });
+                }
             }
         }
     })
 
-    .filter('startBy', function (){
-        return function(collection, start) {
+    .filter('startBy', function () {
+        return function (collection, start) {
             start = +start;
-            var _collection = angular.copy(collection);
-            return _collection.splice(start);
+            return collection.splice(start);
         }
-    })
-
-    .directive('refreshBookList', function($scope, $http) {
-        $http.get('http://localhost:3000/books')
-            .then(function(response){
-                $scope.books = response.data;
-                $scope.numberOfPages = Math.ceil($scope.books.length/$scope.pageSize);
-            });
     });
