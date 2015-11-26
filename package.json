@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/infoshareacademy/books-gui/issues"
   },
-  "homepage": "https://github.com/infoshareacademy/books-gui#readme"
+  "homepage": "https://github.com/infoshareacademy/books-gui#readme",
+  "devDependencies": {
+    "jasmine-expect": "^1.22.3",
+    "jasmine-matchers": "^0.2.3",
+    "karma-jasmine-matchers": "^0.1.3"
+  }
 }

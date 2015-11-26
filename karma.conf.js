@@ -10,11 +10,18 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+
+
+    frameworks: [
+      'jasmine'
+    ],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'src/app/js/angular.js',
+      'src/app/js/angular-mocks.js',
+      'src/app/js/jasmine-matchers.js',
       'src/**/*.js',
       'test/**/*.js'
     ],
@@ -68,4 +75,4 @@ module.exports = function(config) {
     // how many browser should be started simultanous
     concurrency: Infinity
   })
-}
+};
