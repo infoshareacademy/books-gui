@@ -32,6 +32,12 @@ angular.module('BooksGUI')
                             console.log('marek');
                             initNewList();
                         });
+                };
+                $scope.addToFavorite = function(favoriteBook){
+                    $http.post('http://localhost:3000/favoriteBooks', favoriteBook)
+                        .then(function(response){
+                            console.log(response);
+                        })
                 }
             }
         }
