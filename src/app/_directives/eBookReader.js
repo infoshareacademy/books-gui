@@ -6,6 +6,11 @@ angular.module('BooksGUI')
             transclude: true,
             scope: {},
             controller: function ($scope) {
+                $scope.Book = ePub("../../exampleBooks/Moby-Dick.epub");
+
+                $scope.Book.renderTo("area");
+
             }
         }
+
     });

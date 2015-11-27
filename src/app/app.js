@@ -31,4 +31,8 @@ angular.module('BooksGUI', [
                 url:'/logOut',
                 templateUrl:'views/logOut.html'
             })
+            .state('ePubViewer', {
+                url:'/ePubViewer',
+                templateUrl:'views/ePubViewer.html'
+            })
     });
