@@ -1,0 +1,23 @@
+{
+  "name": "books-gui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infoshareacademy/books-gui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infoshareacademy/books-gui/issues"
+  },
+  "homepage": "https://github.com/infoshareacademy/books-gui#readme",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-angular-gettext": "^2.1.3"
+  }
+}

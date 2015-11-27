@@ -1,6 +1,11 @@
 angular.module('BooksGUI', [
-    'ui.router'
+    'ui.router', 'gettext'
 ])
+    .run(function (gettextCatalog) {
+        gettextCatalog.currentLanguage = 'pl_PL';
+        gettextCatalog.debug = true;
+    })
+
     .controller('BooksController', function($scope){
         $scope.books = [];
     })
@@ -32,3 +37,4 @@ angular.module('BooksGUI', [
                 templateUrl:'views/logOut.html'
             })
     });
+
