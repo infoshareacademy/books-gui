@@ -5,6 +5,10 @@ angular.module('BooksGUI', [
         $scope.books = [];
     })
 
+    .controller('SubscriberController', function($scope, $http){
+        $scope.newSubscriber = [];
+    })
+
     .controller('BooksGUIController', function ($scope) {})
 
     .config(function($stateProvider, $urlRouterProvider){
@@ -30,5 +34,9 @@ angular.module('BooksGUI', [
             .state('logOut',{
                 url:'/logOut',
                 templateUrl:'views/logOut.html'
+            })
+            .state('subscribe',{
+                url:'/subscribe',
+                templateUrl:'views/subscribe.html'
             })
     });
