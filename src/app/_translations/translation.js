@@ -1,6 +1,6 @@
 angular.module('gettext').run(['gettextCatalog', function (gettextCatalog) {
 /* jshint -W100 */
-    gettextCatalog.setStrings('en_GB', {"Favorites":"Favorites","Home":"Home","List":"List"});
-    gettextCatalog.setStrings('pl_PL', {"Favorites":"Ulubione","Home":"Główne","List":"Lista"});
+    gettextCatalog.setStrings('en_GB', {"Add":"Add","Add to Favorite":"Add to Favorite","Change language":"Change language","English":"English","Favorites":"Favorites","Home":"Home","List":"List","Next":"Next","Polish":"Polish","Previous":"Previous","Price":"Price","Refresh list":"Refresh list","Refresh list from Allegro":"Refresh list from Allegro","Search title in list":"Search title in list","Time to End":"Time to End","Title":"Title","Your eBook list":"Your eBook list"});
+    gettextCatalog.setStrings('pl_PL', {"Add":"Dodaj","Add to Favorite":"Dodaj do ulubionych","Change language":"Zmień język","English":"Angielski","Favorites":"Ulubione","Home":"Główne","List":"Lista","Next":"Następna","Polish":"Polski","Previous":"Poprzednia","Price":"Cena","Refresh list":"Odśwież","Refresh list from Allegro":"Odśwież listę z Allegro","Search title in list":"Wyszukaj tytuł z listy","Time to End":"Czas do zakończenia","Title":"Tytuł","Your eBook list":"Twoja lista eBooków"});
 /* jshint +W100 */
 }]);

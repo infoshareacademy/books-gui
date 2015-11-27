@@ -4,6 +4,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
+#: src/app/_directives/list.html:44
+msgid "Add"
+msgstr ""
+
+#: src/app/_directives/list.html:34
+msgid "Add to Favorite"
+msgstr ""
+
+#: src/app/_directives/languageSwitcher.html:1
+msgid "Change language"
+msgstr ""
+
+#: src/app/_directives/languageSwitcher.html:3
+msgid "English"
+msgstr ""
+
 #: src/app/_directives/navigation.html:48
 msgid "Favorites"
 msgstr ""
@@ -14,4 +30,46 @@ msgstr ""
 
 #: src/app/_directives/navigation.html:45
 msgid "List"
+msgstr ""
+
+#: src/app/_directives/list.html:16
+#: src/app/_directives/list.html:51
+msgid "Next"
+msgstr ""
+
+#: src/app/_directives/languageSwitcher.html:4
+msgid "Polish"
+msgstr ""
+
+#: src/app/_directives/list.html:14
+#: src/app/_directives/list.html:49
+msgid "Previous"
+msgstr ""
+
+#: src/app/_directives/list.html:29
+msgid "Price"
+msgstr ""
+
+#: src/app/_directives/list.html:11
+msgid "Refresh list"
+msgstr ""
+
+#: src/app/_directives/list.html:10
+msgid "Refresh list from Allegro"
+msgstr ""
+
+#: src/app/_directives/list.html:6
+msgid "Search title in list"
+msgstr ""
+
+#: src/app/_directives/list.html:32
+msgid "Time to End"
+msgstr ""
+
+#: src/app/_directives/list.html:26
+msgid "Title"
+msgstr ""
+
+#: src/app/_directives/list.html:3
+msgid "Your eBook list"
 msgstr ""
