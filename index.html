@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BooksGui">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="src/app/style/css/bootstrap.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="src/app/js/angular.js"></script>
+    <script type="text/javascript" src="src/app/js/jquery.js"></script>
+    <script type="text/javascript" src="src/app/js/bootstrap.js"></script>
+    <script type="text/javascript" src="src/app/js/angular-mocks.js"></script>
+    <script type="text/javascript" src="src/app/js/jasmine-matchers.js"></script>
+
+
+    <!-- App module -->
+    <script type="text/javascript" src="src/app/app.js"></script>
+</head>
+<body>
+
+<div class="container" ng-controller="BaseController">
+    <div class="header clearfix text-center">
+        <h1 class="text-muted">BooksGui</h1>
+    </div>
+
+
+    <div ng-repeat="books in books" >
+
+        <p>ID:{{books.itemId}}</p>
+        <p>Title:{{books.itemTitle}}</p>
+        <p>Seller:{{books.sellerInfo.userLogin}}</p>
+        <p>__________</p>
+
+    </div>
+    <!--<button ng-click="currentPage = currentPage-1" ng-disabled="currentPage==0">previous</button>-->
+    <!--{{currentPage+1}}/{{numberOfPages}}-->
+    <!--<button ng-click="currentPage = currentPage+1" ng-disabled="currentPage == numberOfPages-1">next</button>-->
+</div>
+</body>
+</html>
