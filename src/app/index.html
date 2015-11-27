@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="BooksGUI">
 <head>
     <meta charset="UTF-8">
     <title>Allegro eBooks</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="style/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="style/css/navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="style/css/styles.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Scripts -->
     <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="_directives/navigation.js"></script>
+    <script type="text/javascript" src="_directives/home.js"></script>
+    <script type="text/javascript" src="_directives/list.js"></script>
+    <script type="text/javascript" src="_directives/favorite.js"></script>
 </head>
 <body>
+
+<div id="wrapper">
+
+    <navigation-menu></navigation-menu>
+
+
+    <div ui-view></div>
+
+
+
+
+</div>
+
+
 
 </body>
 </html>
