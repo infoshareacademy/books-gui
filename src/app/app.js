@@ -1,9 +1,12 @@
-
 angular.module('BooksGUI', [
     'ui.router'
 ])
     .controller('BooksController', function($scope){
         $scope.books = [];
+    })
+
+    .controller('SubscriberController', function($scope, $http){
+        $scope.newSubscriber = [];
     })
 
     .controller('BooksGUIController', function ($scope) {})
@@ -31,6 +34,10 @@ angular.module('BooksGUI', [
             .state('logOut',{
                 url:'/logOut',
                 templateUrl:'views/logOut.html'
+            })
+            .state('subscribe',{
+                url:'/subscribe',
+                templateUrl:'views/subscribe.html'
             })
             .state('ePubViewer', {
                 url:'/ePubViewer',
