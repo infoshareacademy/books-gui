@@ -15,7 +15,7 @@ angular.module('BooksGUI')
 
                 var initNewList = function () {
 
-                    $http.get('http://localhost:8080/books-filter/web/app_dev.php?format=pretty')
+                    $http.get('http://localhost:8080/books-filter/app_dev.php?format=pretty')
                         .then(function (response) {
                             $scope.books = response.data;
                             $scope.numberOfPages = Math.ceil($scope.books.length / $scope.pageSize);

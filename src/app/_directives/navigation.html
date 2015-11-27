@@ -26,9 +26,6 @@
                     <li>
                         <a ui-sref="subscribe"><i class="fa fa-fw fa-envelope"></i> Substribe</a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                    </li>
                     <li class="divider"></li>
                     <li>
                         <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
@@ -42,24 +39,19 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a ui-sref="newBooks"><i class="fa fa-bell"></i> <span class="label label-success">New eBooks</span></a>
+                    <a ui-sref="homepage"><i class="fa fa-fw fa-dashboard"></i>{{ 'Home' | translate}}</a>
                 </li>
                 <li>
-                    <a ui-sref="homepage"><i class="fa fa-fw fa-dashboard"></i> Home</a>
-                </li>
-                <li>
-                    <a ui-sref="bookList"><i class="fa fa-fw fa-table"></i> List</a>
-                </li>
-                <li>
-                    <a ui-sref="favoriteBook"><i class="fa fa-fw fa-heart"></i> Favorite</a>
+                    <a ui-sref="bookList"><i class="fa fa-fw fa-table"></i>{{ 'List' | translate}}</a>
                 </li>
                 </li>
                 <li>
                     <a ui-sref="ePubViewer"><i class="fa fa-fw fa-book"></i> ePubViewer</a>
                 </li>
                 <li>
-                    <a ui-sref="logOut"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a ui-sref="favoriteBook"><i class="fa fa-fw fa-heart"></i>{{ 'Favorites' | translate}}</a>
                 </li>
+                <language-switcher></language-switcher>
             </ul>
         </div>
     </nav>
